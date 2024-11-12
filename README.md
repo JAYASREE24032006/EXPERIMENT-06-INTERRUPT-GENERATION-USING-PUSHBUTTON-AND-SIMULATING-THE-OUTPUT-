@@ -1,17 +1,17 @@
-# EX6 - INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT
+# EX6 - INTERRUPT GENERATION USING PUSHBUTTON AND SIMULATING THE OUTPUT 
 
-## Aim :
+## AIM :
 To Interface a push button and generate an interrupt , simulate it using an led and simuate it on  proteus 
 
-## Components required :
+## COMPONENTS REQUIRED :
 STM32 CUBE IDE, Proteus 8 simulator .
 
-## Theory :
+## THEORY :
 
 ARM v7 Core supports multiple great features for handling exceptions and interrupts. Which includes the Nested Vectored Interrupt Controller (NVIC).
 
 Micro-Coded Architecture So that interrupt stacking, entry, and exit are done automatically in hardware. Which offloads this work overhead from the CPU
-### Processor Mode 
+### PROCESSOR MODE :
 
 The processor mode can change when exceptions occur. And it can be in one of the following modes:
 Thread Mode: Which is entered on reset.
@@ -32,7 +32,7 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
 One important thing to note here is that same number pins are connected to line with the same number. All of these then join to form a single line. Additionally, we can not use two pins one one line at the same time. For example out of PA1, PB1, PC1, PD1, PE1, PF1 and PG1 you can only use a single pin out of all these. This is because they are all connected to the same line EXTI1. However you can use PA1 and PA2 at the same time as they are connected with different lines.
 
 Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on different modes of the signal : rising edge, falling edge or rising_falling edge.
-## Procedure :
+## PROCEDURE :
  1. click on STM 32 CUBE IDE, the following screen will appear 
  ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
 
@@ -43,19 +43,19 @@ Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on diff
 
 ![image](https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png)
 
-4.select the program name 
+4. select the program name 
 ![image](https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png)
 
 
 5. corresponding ioc file will be generated automatically 
 ![image](https://user-images.githubusercontent.com/36288975/226189378-3abbdee2-0df6-470f-a3cd-79c74e3d3ad8.png)
 
-6.select the appropriate pins as gipo, in or out, USART or required options and configure 
+6. select the appropriate pins as gipo, in or out, USART or required options and configure 
 ![image](https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png)
 ![image](https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png)
 
 
-7.click on cntrl+S , automaticall C program will be generated 
+7. click on cntrl+S , automaticall C program will be generated 
 ![image](https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png)
 ![image](https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png)
 8. edit the program and as per required 
@@ -70,7 +70,7 @@ Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on diff
 ![image](https://user-images.githubusercontent.com/36288975/226189625-37daa9a3-62e9-42b5-a5ce-2ac63345905b.png)
 
 
-12.  Creating Proteus project and running the simulation
+12. Creating Proteus project and running the simulation
 We are now at the last part of step by step guide on how to simulate STM32 project in Proteus.
 
 13. Create a new Proteus project and place STM32F40xx i.e. the same MCU for which the project was created in STM32Cube IDE. 
@@ -177,16 +177,16 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 
-## Output screen shots of proteus  :
+## OUTPUT :
 ![image](https://github.com/user-attachments/assets/988f6c0b-eb4d-474e-894a-973c5c70d2ee)
 
 ![image](https://github.com/user-attachments/assets/fb49debc-526b-42f9-a0ff-70a3a45ee37a)
 
  
  
- ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+ ## CIRCUIT DIAGRAM : 
  ![image](https://github.com/user-attachments/assets/1cee502a-01ab-4f12-a671-bab7cb32fbe0)
 
  
-## Result :
-Interfacing a push button and interrupt genrateion is simulated using proteus 
+## RESULT :
+Interfacing a push button and interrupt genrateion is simulated using proteus successfully.
